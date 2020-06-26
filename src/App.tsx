@@ -22,6 +22,7 @@ export function App() {
         <Centered>
           <h1>Shange the World!</h1>
           <StatefulInput />
+          <h2>yeah!</h2>
         </Centered>
       </BaseProvider>
     </StyletronProvider>
