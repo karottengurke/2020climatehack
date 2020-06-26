@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0fe5fad2d5715534608e6f5931e7bc81",
+    "revision": "9829ab5e6b7835497b1be668479728cf",
     "url": "/2020climatehack/index.html"
   },
   {
-    "revision": "ea20c2ea15201bb0d47e",
+    "revision": "3b423fa5435ab80e9412",
     "url": "/2020climatehack/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/2020climatehack/static/js/2.08a0e9f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ea20c2ea15201bb0d47e",
-    "url": "/2020climatehack/static/js/main.e5ddee60.chunk.js"
+    "revision": "3b423fa5435ab80e9412",
+    "url": "/2020climatehack/static/js/main.2000ff7d.chunk.js"
   },
   {
     "revision": "ae075959b66539478983",
