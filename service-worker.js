@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/2020climatehack/precache-manifest.1f7ea756413ed081c2b4977689e05989.js"
+  "/2020climatehack/precache-manifest.b4de2a310214bebd532178d95d39fb85.js"
 );
 
 self.addEventListener('message', (event) => {
