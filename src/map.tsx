@@ -31,10 +31,10 @@ var redIcon = new Leaflet.Icon({
   shadowSize: [41, 41],
 })
 
-export function Map(props: { isShowing?: boolean; onClose?: () => void }) {
-  const { isShowing = false, onClose } = props
+export function Map(props: { isOpen?: boolean; onClose?: () => void }) {
+  const { isOpen = false, onClose } = props
   return (
-    <Modal isOpen={isShowing} closeable onClose={onClose}>
+    <Modal isOpen={isOpen} closeable onClose={onClose}>
       <div className="details-on-map show-map">
         <div className="paper-map">
           <div className="map-side"></div>

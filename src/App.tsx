@@ -16,6 +16,7 @@ import { GiLightBulb, GiTreasureMap } from 'react-icons/gi'
 import { Textarea } from 'baseui/textarea'
 import Map from './map'
 import { IconContext } from './icons'
+import { Game } from './game'
 
 const engine = new Styletron()
 
@@ -60,11 +61,16 @@ export function App() {
     []
   )
 
-  const [isShowingMap, modifyIsShowingMap] = useToggle(true)
+  const [isShowingMap, modifyIsShowingMap] = useToggle(false)
+  const [isShowingGame, modifyIsShowingGame] = useToggle(true)
 
   const onDismissMap = useCallback(() => {
     modifyIsShowingMap.setFalse()
   }, [modifyIsShowingMap])
+
+  const onDismissGame = useCallback(() => {
+    modifyIsShowingGame.setFalse()
+  }, [modifyIsShowingGame])
 
   const [Slider] = useSlider(isDarkTheme)
   const [ImpressumButton, ImpressumModal] = useImpressum()
@@ -74,14 +80,10 @@ export function App() {
       <BaseProvider theme={isDarkTheme ? DarkTheme : LightTheme}>
         <IconContext isDarkTheme={isDarkTheme} fullSize={false}>
           <Centered className="centred">
-            <Map isShowing={isShowingMap} onClose={onDismissMap} />
-            <ButtonGroup
-              overrides={{
-                Root: {
-                  style: {},
-                },
-              }}
-            >
+            <Map isOpen={isShowingMap} onClose={onDismissMap} />
+            <Game isOpen={isShowingGame} onClose={onDismissGame} />
+
+            <ButtonGroup>
               {ManualShaker}
               <Button onClick={modifyIsShowingMap.setTrue}>
                 <GiTreasureMap />
