@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/2020climatehack/static/css/main.e155234e.chunk.css",
-    "main.js": "/2020climatehack/static/js/main.78acae6f.chunk.js",
-    "main.js.map": "/2020climatehack/static/js/main.78acae6f.chunk.js.map",
+    "main.js": "/2020climatehack/static/js/main.2822c81d.chunk.js",
+    "main.js.map": "/2020climatehack/static/js/main.2822c81d.chunk.js.map",
     "runtime-main.js": "/2020climatehack/static/js/runtime-main.f314b74c.js",
     "runtime-main.js.map": "/2020climatehack/static/js/runtime-main.f314b74c.js.map",
-    "static/js/2.05032df8.chunk.js": "/2020climatehack/static/js/2.05032df8.chunk.js",
-    "static/js/2.05032df8.chunk.js.map": "/2020climatehack/static/js/2.05032df8.chunk.js.map",
+    "static/js/2.e70a531a.chunk.js": "/2020climatehack/static/js/2.e70a531a.chunk.js",
+    "static/js/2.e70a531a.chunk.js.map": "/2020climatehack/static/js/2.e70a531a.chunk.js.map",
     "index.html": "/2020climatehack/index.html",
-    "precache-manifest.cf5ec935352a868410d94cd57131262d.js": "/2020climatehack/precache-manifest.cf5ec935352a868410d94cd57131262d.js",
+    "precache-manifest.e40718110d88358c1beaf9e6f4b13f99.js": "/2020climatehack/precache-manifest.e40718110d88358c1beaf9e6f4b13f99.js",
     "service-worker.js": "/2020climatehack/service-worker.js",
     "static/css/main.e155234e.chunk.css.map": "/2020climatehack/static/css/main.e155234e.chunk.css.map",
-    "static/js/2.05032df8.chunk.js.LICENSE.txt": "/2020climatehack/static/js/2.05032df8.chunk.js.LICENSE.txt"
+    "static/js/2.e70a531a.chunk.js.LICENSE.txt": "/2020climatehack/static/js/2.e70a531a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f314b74c.js",
-    "static/js/2.05032df8.chunk.js",
+    "static/js/2.e70a531a.chunk.js",
     "static/css/main.e155234e.chunk.css",
-    "static/js/main.78acae6f.chunk.js"
+    "static/js/main.2822c81d.chunk.js"
   ]
 }
