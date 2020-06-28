@@ -11,10 +11,11 @@ import { ButtonGroup } from 'baseui/button-group'
 import { useImpressum } from './impressum'
 import { useToggle } from './useToggle'
 import { Heading, HeadingLevel } from 'baseui/heading'
-import { IconContext } from 'react-icons'
 import { Button } from 'baseui/button'
-import { GiLightBulb } from 'react-icons/gi'
+import { GiLightBulb, GiTreasureMap } from 'react-icons/gi'
 import { Textarea } from 'baseui/textarea'
+import Map from './map'
+import { IconContext } from './icons'
 
 const engine = new Styletron()
 
@@ -59,22 +60,21 @@ export function App() {
     []
   )
 
-  const [Slider] = useSlider()
+  const [isShowingMap, modifyIsShowingMap] = useToggle(true)
+
+  const onDismissMap = useCallback(() => {
+    modifyIsShowingMap.setFalse()
+  }, [modifyIsShowingMap])
+
+  const [Slider] = useSlider(isDarkTheme)
   const [ImpressumButton, ImpressumModal] = useImpressum()
 
   return (
     <StyletronProvider value={engine}>
       <BaseProvider theme={isDarkTheme ? DarkTheme : LightTheme}>
-        <IconContext.Provider
-          value={{
-            color: isDarkTheme ? 'white' : 'black',
-            style: {
-              width: '100%',
-              height: '100%',
-            },
-          }}
-        >
+        <IconContext isDarkTheme={isDarkTheme} fullSize={false}>
           <Centered className="centred">
+            <Map isShowing={isShowingMap} onClose={onDismissMap} />
             <ButtonGroup
               overrides={{
                 Root: {
@@ -83,6 +83,9 @@ export function App() {
               }}
             >
               {ManualShaker}
+              <Button onClick={modifyIsShowingMap.setTrue}>
+                <GiTreasureMap />
+              </Button>
               {ImpressumButton}
               <Button onClick={modifyIsDarkTheme.toggle}>
                 <GiLightBulb />
@@ -109,7 +112,7 @@ export function App() {
             </HeadingLevel>
             {ImpressumModal}
           </Centered>
-        </IconContext.Provider>
+        </IconContext>
       </BaseProvider>
     </StyletronProvider>
   )

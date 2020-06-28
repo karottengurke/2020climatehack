@@ -10,6 +10,7 @@ import {
 import { Slider as BaseSlider } from 'baseui/slider'
 import { IconType } from 'react-icons/lib'
 import { useSpring, animated, config } from 'react-spring'
+import { IconContext } from './icons'
 
 const groups: { Icon: IconType; size: number }[] = [
   { Icon: GiAtom, size: 50 },
@@ -29,7 +30,9 @@ function pick(val: number) {
   return groups[idx]
 }
 
-export function Slider() {
+export const Slider: React.FC<{ isDarkTheme?: boolean }> = ({
+  isDarkTheme,
+}) => {
   const [value, setValue] = React.useState([1])
   const handleChange = useCallback(
     ({ value }) => value[0] >= MIN && value[0] <= MAX && setValue(value),
@@ -44,17 +47,18 @@ export function Slider() {
   })
 
   return (
-    <>
+    <IconContext isDarkTheme={isDarkTheme} fullSize={true}>
       <BaseSlider min={MIN} max={MAX} value={value} onChange={handleChange} />
+
       <animated.div style={props}>
         <Icon />
       </animated.div>
-    </>
+    </IconContext>
   )
 }
 
-export function useSlider() {
-  return [<Slider />]
+export function useSlider(isDarkTheme?: boolean) {
+  return [<Slider isDarkTheme={isDarkTheme} />]
 }
 
 export default useSlider
